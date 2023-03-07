@@ -1,10 +1,11 @@
 # Installation
 
-1. Operating System Libs
+1. Operating system libs
 
     ```bash
     sudo apt install python3-venv
     ```
+
 1. Virtual environment
 
     ```bash
@@ -13,11 +14,15 @@
     # deactive venv
     . venv/bin/activate
 
-    pip install --upgrade pip --requirement app/requirements.txt
+    pip install --upgrade pip --requirement requirements.txt
     ```
 
-# Run Program
+# Run
 
 ```bash
 flask --app app/main.py run --debug --port 5000 --reload
 ```
+
+# Inspect
+
+[http://localhost:5000/](http://localhost:5000/)

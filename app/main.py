@@ -1,13 +1,12 @@
+import json
 import os
 import random
-import json
 
-from flask import Flask
 from flask import jsonify
 from flask import render_template
 from json.decoder import JSONDecodeError
 
-app = Flask(__name__)
+from . import app
 
 @app.route("/")
 def index():
