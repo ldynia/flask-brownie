@@ -3,6 +3,7 @@
 1. Operating system libs
 
     ```bash
+    sudo apt update
     sudo apt install python3-venv
     ```
 
@@ -20,7 +21,7 @@
 # Run
 
 ```bash
-flask --app app/main.py run --debug --port 5000 --reload
+flask --app app/main.py run --debug --port 5000 --reload --host 0.0.0.0
 ```
 
 # Inspect
