@@ -2,7 +2,6 @@ import json
 import os
 import random
 
-from flask import jsonify
 from flask import render_template
 from json.decoder import JSONDecodeError
 
@@ -10,15 +9,14 @@ from . import app
 
 @app.route("/")
 def index():
-    return render_template('index.html')
+    WORKDIR = os.environ.get("WORKDIR", f"{os.getcwd()}/app")
+    
+    data, err = read_data(f"{WORKDIR}/data/db.json")
+    skill = "Fallback skills"
+    if data:
+        skill = random.choice(data)['skill']
 
-@app.route("/skills")
-def skills():
-    data, err = read_data(f"{os.getcwd()}/app/data/db.json")
-    if err:
-        return jsonify({"skill": "Fallback skills"})
-
-    return jsonify(random.choice(data))
+    return render_template('index.html', skill=skill.upper())
 
 def read_data(source):
     data = []

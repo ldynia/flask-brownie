@@ -4,7 +4,7 @@
 
     ```bash
     sudo apt update
-    sudo apt install python3-venv
+    sudo apt install --yes python3-venv
     ```
 
 1. Virtual environment
@@ -15,13 +15,13 @@
     # deactive venv
     . venv/bin/activate
 
-    pip install --upgrade pip --requirement requirements.txt
+    pip install --upgrade pip --requirement app/requirements.txt
     ```
 
 # Run
 
 ```bash
-flask --app app/main.py run --debug --port 5000 --reload --host 0.0.0.0
+flask --app app/main run --debug --port 5000 --reload --host 0.0.0.0
 ```
 
 # Inspect
