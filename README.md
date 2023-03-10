@@ -21,7 +21,7 @@
 # Run
 
 ```bash
-flask --app app/main run --debug --port 5000 --reload --host 0.0.0.0
+flask --app app run --debug --port 5000 --reload --host 0.0.0.0
 ```
 
 # Inspect

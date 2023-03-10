@@ -5,12 +5,12 @@ import random
 from flask import render_template
 from json.decoder import JSONDecodeError
 
-from . import app
+from app import app
 
 @app.route("/")
 def index():
     WORKDIR = os.environ.get("WORKDIR", f"{os.getcwd()}/app")
-    
+
     data, err = read_data(f"{WORKDIR}/data/db.json")
     skill = "Fallback skills"
     if data:
