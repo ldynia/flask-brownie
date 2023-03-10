@@ -6,7 +6,7 @@
 
 1. TDD: end-to-end testing with bash
 
-    tests/e2e.sh
+    app/tests/e2e.sh
 
     ```bash
     #!/usr/bin/env bash
